@@ -34,12 +34,13 @@
         <!-- Utilisation de justify-center pour centrer les liens, logo en absolute à gauche -->
         <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-center relative">
             <div class="text-xl font-bold gradient-text absolute left-6">TP.</div>
-            <ul class="flex space-x-4 md:space-x-8 font-medium text-xs md:text-sm text-slate-600">
+            <ul class="flex space-x-4 md:space-x-8 font-medium text-xs md:text-sm text-slate-600 items-center">
                 <li><a href="#accueil" class="hover:text-blue-600 transition cursor-pointer">Accueil</a></li>
                 <li><a href="#competences" class="hover:text-blue-600 transition cursor-pointer">Compétences</a></li>
                 <li><a href="#projets" class="hover:text-blue-600 transition cursor-pointer">Réalisations</a></li>
                 <li><a href="#objectifs" class="hover:text-blue-600 transition cursor-pointer">Objectifs</a></li>
                 <li><a href="#contact" class="hover:text-blue-600 transition font-semibold text-blue-600 cursor-pointer">Contact</a></li>
+                <li><a href="cv.pdf" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-blue-700 transition shadow-sm">Mon CV</a></li>
             </ul>
         </nav>
     </header>
@@ -140,7 +141,7 @@
                 <!-- Projet 1 : RestoN -->
                 <a href="https://github.com/TimPierret/restoN" target="_blank" rel="noopener noreferrer" class="group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 transition-all hover:border-orange-200 shadow-sm hover:shadow-xl flex flex-col cursor-pointer">
                     <div class="aspect-video bg-slate-200 overflow-hidden relative">
-                        <img src="RestoN.png" alt="Capture d'écran du projet RestoN" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="image_17db1d.jpg" alt="Capture d'écran du projet RestoN" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="p-8 flex-1">
                         <h3 class="text-2xl font-bold mb-3 group-hover:text-orange-600 transition">RestoN</h3>
@@ -156,7 +157,8 @@
                 <!-- Projet 2 : SteamDB Manager (Anciennement Bibliothèque Steam) -->
                 <a href="https://github.com/TimPierret/games" target="_blank" rel="noopener noreferrer" class="group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 transition-all hover:border-blue-200 shadow-sm hover:shadow-xl flex flex-col cursor-pointer">
                     <div class="aspect-video bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
-                        <img src="game.png" alt="Capture d'écran du projet game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <!-- Icône de base de données / jeu -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 group-hover:text-blue-500 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
                     </div>
                     <div class="p-8 flex-1">
                         <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition">SteamDB Manager (App CRUD)</h3>
@@ -172,7 +174,8 @@
                 <!-- Projet 3 : Space Invaders -->
                 <a href="https://github.com/TimPierret/spaceInvaders" target="_blank" rel="noopener noreferrer" class="group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 transition-all hover:border-purple-200 shadow-sm hover:shadow-xl flex flex-col cursor-pointer">
                     <div class="aspect-video bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-purple-50 transition">
-                        <img src="spaceInvader.png" alt="Capture d'écran du projet spaceInvader" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <!-- Icône fusée / espace -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 group-hover:text-purple-500 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v8l9-11h-7z" /></svg>
                     </div>
                     <div class="p-8 flex-1">
                         <h3 class="text-2xl font-bold mb-3 group-hover:text-purple-600 transition">Space Invaders</h3>
@@ -207,14 +210,17 @@
                 </div>
             </div>
 
-            <form onsubmit="handleContact(event)" class="bg-slate-800 p-8 rounded-3xl space-y-4 shadow-2xl">
+            <!-- NOUVEAU FORMULAIRE AVEC FORMSPREE -->
+            <!-- REMPLACE L'URL DANS "action" PAR CELLE QUE TE DONNERA FORMSPREE -->
+            <form action="https://formspree.io/f/TON_ID_ICI" method="POST" class="bg-slate-800 p-8 rounded-3xl space-y-4 shadow-2xl">
                 <div class="grid md:grid-cols-2 gap-4">
-                    <input type="text" id="prenom" placeholder="Prénom" required class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-white placeholder:text-slate-400">
-                    <input type="text" id="nom" placeholder="Nom" required class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-white placeholder:text-slate-400">
+                    <!-- Ajout des attributs name="" -->
+                    <input type="text" name="prenom" placeholder="Prénom" required class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-white placeholder:text-slate-400">
+                    <input type="text" name="nom" placeholder="Nom" required class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-white placeholder:text-slate-400">
                 </div>
-                <input type="email" id="email" placeholder="Email" required class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-white placeholder:text-slate-400">
-                <input type="text" id="objet" placeholder="Objet" required class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-white placeholder:text-slate-400">
-                <textarea id="message" rows="4" placeholder="Votre message..." required class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-white placeholder:text-slate-400"></textarea>
+                <input type="email" name="email" placeholder="Email" required class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-white placeholder:text-slate-400">
+                <input type="text" name="objet" placeholder="Objet" required class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-white placeholder:text-slate-400">
+                <textarea name="message" rows="4" placeholder="Votre message..." required class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-white placeholder:text-slate-400"></textarea>
                 
                 <div class="flex items-start space-x-2 text-[10px] text-slate-400">
                     <input type="checkbox" required class="mt-1 rounded bg-slate-700 border-none text-blue-600 focus:ring-0">
@@ -224,7 +230,6 @@
                 <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition">
                     Envoyer le message
                 </button>
-                <div id="statusMessage" class="hidden text-center text-sm pt-4"></div>
             </form>
         </div>
     </section>
@@ -247,29 +252,6 @@
     </footer>
 
     <script>
-        // Gestion de l'envoi du formulaire
-        function handleContact(e) {
-            e.preventDefault();
-            const status = document.getElementById('statusMessage');
-            
-            const prenom = document.getElementById('prenom').value;
-            const nom = document.getElementById('nom').value;
-            const email = document.getElementById('email').value;
-            const objet = document.getElementById('objet').value;
-            const msg = document.getElementById('message').value;
-
-            const mailTo = "timo.pierret@gmail.com";
-            const body = `Message de ${prenom} ${nom} (${email}) : \n\n ${msg}`;
-            
-            status.textContent = "Lancement de votre client mail...";
-            status.className = "text-center text-sm pt-4 text-green-500";
-            status.classList.remove('hidden');
-
-            setTimeout(() => {
-                window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(objet)}&body=${encodeURIComponent(body)}`;
-            }, 800);
-        }
-
         // Affichage des mentions légales
         function toggleMentions() {
             const box = document.getElementById('mentionsBox');
