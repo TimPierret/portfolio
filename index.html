@@ -242,10 +242,46 @@
             </div>
         </div>
         
-        <div id="mentionsBox" class="hidden mt-8 p-6 bg-slate-800 rounded-xl max-w-2xl mx-auto text-xs text-slate-400 leading-relaxed">
-            <h3 class="text-white font-bold mb-4 uppercase tracking-wider">Mentions Légales & RGPD</h3>
-            <p class="mb-2">Responsable de publication : Timothé Pierret.</p>
-            <p>Conformément au RGPD, les données saisies dans le formulaire ne sont pas stockées sur ce site. Elles sont directement envoyées par email à des fins de recrutement (Destination : timo.pierret@gmail.com).</p>
+        <!-- Mentions Légales Box -->
+        <div id="mentionsBox" class="hidden mt-8 p-8 bg-slate-800 rounded-xl max-w-4xl mx-auto text-xs text-slate-400 leading-relaxed shadow-2xl border border-slate-700">
+            <div class="flex justify-between items-center border-b border-slate-700 pb-4 mb-6">
+                <h3 class="text-white font-bold uppercase tracking-wider text-sm">Mentions Légales & Politique de Confidentialité</h3>
+                <button onclick="toggleMentions()" class="text-slate-400 hover:text-white transition" title="Fermer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            
+            <div class="space-y-6 max-h-96 overflow-y-auto pr-4">
+                <div>
+                    <h4 class="font-bold text-slate-300 text-sm mb-1">1. Éditeur du site</h4>
+                    <p>Le présent site (portfolio) est édité par <strong>Timothé Pierret</strong>, personne physique à titre non commercial.<br>
+                    Email de contact : <a href="mailto:timo.pierret@gmail.com" class="text-blue-400 hover:underline">timo.pierret@gmail.com</a><br>
+                    Directeur de la publication : Timothé Pierret.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-300 text-sm mb-1">2. Hébergement</h4>
+                    <p>Ce site est hébergé par <strong>GitHub Inc. (via GitHub Pages)</strong>.<br>
+                    Adresse de l'hébergeur : 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis<br>
+                    Site web : <a href="https://github.com" target="_blank" class="text-blue-400 hover:underline">https://github.com</a></p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-300 text-sm mb-1">3. Propriété intellectuelle</h4>
+                    <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations photographiques. La reproduction de tout ou partie de ce site sur quel que support que ce soit est formellement interdite sauf autorisation expresse de Timothé Pierret.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-300 text-sm mb-1">4. Données personnelles & RGPD</h4>
+                    <p>Les informations recueillies via le formulaire de contact (Nom, Prénom, Email, Objet, Message) sont utilisées uniquement dans le but de répondre à vos demandes de contact ou de recrutement. Ces données sont transmises de manière sécurisée via le service tiers <em>Formspree</em> et directement envoyées à l'adresse <em>timo.pierret@gmail.com</em>.</p>
+                    <p class="mt-2">Aucune de ces données n'est stockée dans une base de données liée à ce site. Conformément à la loi "Informatique et Libertés" et au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Vous pouvez exercer ce droit en contactant l'éditeur du site par email.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-300 text-sm mb-1">5. Cookies</h4>
+                    <p>Ce site statique n'utilise aucun cookie de traçage, d'analyse d'audience ou de ciblage publicitaire. Votre navigation se fait dans le respect total de votre vie privée.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
