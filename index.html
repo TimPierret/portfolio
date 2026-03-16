@@ -21,7 +21,6 @@
             -webkit-text-fill-color: transparent;
             background-clip: text; /* Ajout par sécurité pour tous les navigateurs */
         }
-        /* Ajustement précis pour le défilement */
         section { 
             scroll-margin-top: 80px; 
         }
@@ -208,9 +207,7 @@
                 </div>
             </div>
 
-            <!-- NOUVEAU FORMULAIRE AVEC FORMSPREE -->
-            <!-- REMPLACE L'URL DANS "action" PAR CELLE QUE TE DONNERA FORMSPREE -->
-            <form action="https://formspree.io/f/TON_ID_ICI" method="POST" class="bg-slate-800 p-8 rounded-3xl space-y-4 shadow-2xl">
+            <form action="https://formspree.io/f/mon_ID" method="POST" class="bg-slate-800 p-8 rounded-3xl space-y-4 shadow-2xl">
                 <div class="grid md:grid-cols-2 gap-4">
                     <!-- Ajout des attributs name="" -->
                     <input type="text" name="prenom" placeholder="Prénom" required class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-white placeholder:text-slate-400">
@@ -292,7 +289,6 @@
             box.classList.toggle('hidden');
         }
 
-        // Correction spécifique pour s'assurer que les ancres fonctionnent même sur les navigateurs capricieux
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
